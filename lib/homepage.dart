@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,17 +6,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Homepage"),
-        backgroundColor: const Color.fromARGB(255, 157, 170, 82),
-        foregroundColor: Colors.white,
-        // leading: Icon(Icons.home),
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
-        ],
-      ),
-
       drawer: Drawer(
         child: Column(
           children: [
@@ -36,55 +24,29 @@ class HomePage extends StatelessWidget {
               title: Text("Homepage"),
               onTap: () {},
             ),
+
             Divider(),
+
             ListTile(
               trailing: Icon(Icons.call),
               hoverColor: const Color.fromARGB(255, 157, 170, 82),
               title: Text("Contact Me"),
               onTap: () {},
             ),
+
             Divider(),
+
             ListTile(
               trailing: Icon(Icons.feedback),
               hoverColor: const Color.fromARGB(255, 157, 170, 82),
               title: Text("FeedBack"),
               onTap: () {},
             ),
-            Spacer(),
-            Text("Copyright"),
           ],
         ),
       ),
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: const Color.fromARGB(255, 157, 170, 82),
-        foregroundColor: Colors.white,
-        shape: CircleBorder(),
-        tooltip: "Message",
-        child: Icon(Icons.message),
-      ),
-
-      body: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextButton(onPressed: (){}, child: Text("Text")),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(onPressed: (){}, child: Text("Elivated")),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: OutlinedButton(onPressed: (){}, child: Text("Outline")),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: IconButton(onPressed: (){}, icon: Icon(Icons.alarm)),
-          ),
-        ],
-      )
+      body: Container(),
     );
   }
 }
